@@ -1,0 +1,80 @@
+@use "var" as *;
+
+.card {
+    display: grid;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &_big {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        width: 100%;
+        display: block;
+    }
+
+    &__info {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 10px 16px;
+
+        &_outline {
+            background: $white;
+            padding: 20px 20px 18px 20px;
+            height: 100%;
+            border-left: 1px solid #E7E7E7;
+            border-right: 1px solid #E7E7E7;
+            border-bottom: 1px solid #E7E7E7;
+            border-radius: 0 0 5px 5px;
+            
+            .card__info-title {
+                font-family: $robotoCondensed;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: $brown;
+                margin: 0 0 2px 0;
+            }
+
+            .card__info-desc {
+                color: #000;
+                opacity: 0.6;
+                margin: 0 0 30px 0;
+            }
+
+            .card__info-link {
+                margin-top: auto;
+                gap: 0 5px;
+                font-size: 16px;
+                line-height: 150%;
+                text-decoration: underline;
+                color: $primaryOrange;
+            }
+        }
+
+        &-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 120%;
+            color: $white;
+            margin: 0;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            line-height: 143%;
+            color: $primaryOrange;
+        }
+
+    }
+}

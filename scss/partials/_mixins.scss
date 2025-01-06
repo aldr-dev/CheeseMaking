@@ -1,0 +1,17 @@
+@mixin tablet {
+    @media screen and (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin mobileL {
+    @media screen and (max-width: 580px) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        @content;
+    }
+}

@@ -1,0 +1,21 @@
+@use "var" as *;
+
+.breadcrumb {
+    display: flex;
+    font-family: $robotoCondensed;
+    line-height: 157%;
+    letter-spacing: 0.01em;
+
+    &__item:not(:last-child) {
+        background: url(../icons/ic-grey-arrow.svg) right center no-repeat;
+        padding-right: 21px;
+    }
+
+    &__link {
+        color: #808080;
+
+        &_active {
+            color: $primaryOrange;
+        }
+    }
+}

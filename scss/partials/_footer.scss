@@ -1,0 +1,58 @@
+@use "mixins" as *;
+@use "var" as *;
+
+.footer {
+    background: $white;
+    padding: 33px 0 31px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobileL {
+            flex-direction: column;
+        }
+    }
+
+    &__payment-list {
+        display: flex;
+        align-items: center;
+
+        @include mobileL {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__payment-text {
+        font-size: 18px;
+        color: $dark;
+        margin-right: 17px;
+
+        @include mobileL {
+            margin-right: 8px;
+        }
+    }
+
+    &__payment {
+        margin-right: 14px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        text-indent: 102%;
+        overflow: hidden;
+
+       @for $i from 1 through 3 {
+            &_#{$i} {
+                background: #e7e7e7 url(../icons/ic-payment-#{$i}.svg) center center no-repeat;
+            }
+       }
+    }
+
+    &__address {
+        line-height: 143%;
+        color: $dark;
+        margin-right: 6px;
+        margin-top: -4px;
+    }
+}

@@ -1,0 +1,53 @@
+@use "mixins" as *;
+
+.content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    margin-bottom: 96px;
+
+    @include tablet {
+        display: block;
+    }
+
+    &__main {
+        margin-top: 38px;
+    }
+
+    &__receipts {
+        border-bottom: 2px solid #E7E7E7;
+        padding-bottom: 51px;
+        margin-bottom: 38px;
+
+        .title {
+            margin-bottom: 30px;
+        }
+
+        &-cards {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+    }
+
+    &__last-added {
+        .title_big {
+            margin-bottom: 19px;
+        }
+
+        &-cards {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            margin-bottom: 30px;
+        }
+
+        &-loader {
+            text-align: center;
+        }
+
+        &-loader-center {
+            margin-right: 10px;
+        }
+    }
+}

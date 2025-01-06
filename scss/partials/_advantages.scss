@@ -1,0 +1,17 @@
+@use "var" as *;
+
+.advantages {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 123%;
+    color: #808080;
+    padding-left: 34px;
+
+    &_delivery {
+        background: url(../icons/ic-delivery.svg) left center no-repeat;
+    }
+
+    &_protection {
+        background: url(../icons/ic-protection.svg) left center no-repeat;
+    }
+}

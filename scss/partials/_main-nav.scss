@@ -1,0 +1,29 @@
+@use "mixins" as *;
+@use "var" as *;
+
+.main-nav {
+    &__list {
+        display: flex;
+        gap: 22px;
+    }
+
+    &__item {
+        border-bottom: 2px solid transparent;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            @include hover {
+                border-bottom: 2px solid $dark;
+            }
+        }
+    }
+
+    &__link {
+        color: $dark;
+        line-height: 157%;
+    }
+}
+
+  
+    
+  
